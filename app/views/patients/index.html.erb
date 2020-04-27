@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Patients waiting list</h1>
+
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Critical Case Score™</th>
+      <th></th>
+      <th>Pulse</th>
+      <th>Age</th>
+      <th>Respiratory</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.score %></td>
+        <td><%= patient.severity %></td>
+        <td><%= patient.pulse %></td>
+        <td><%= patient.age %></td>
+        <td><%= patient.respiratory %></td>
+        <td><%= link_to 'Treat Patient', patient, :class => "button btn btn-success",  method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div> 
+<%= link_to 'Simulate Adding New Patient', add_new_patient_path, method: :post, :class => "btn btn-primary" %>
+</div>

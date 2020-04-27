@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iBlue</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  
+  <div class="container">  
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">iBlue</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Patients Waiting List</a></li>
+            <li><a href="/about">About us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <%= yield %>
+    </body>
+  </div>
+</html>

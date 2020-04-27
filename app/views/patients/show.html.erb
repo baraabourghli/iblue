@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @patient.score %>
+</p>
+
+<p>
+  <strong>Severity:</strong>
+  <%= @patient.severity %>
+</p>
+
+<p>
+  <strong>Pulse:</strong>
+  <%= @patient.pulse %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @patient.age %>
+</p>
+
+<p>
+  <strong>Respiratory:</strong>
+  <%= @patient.respiratory %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
